@@ -68,5 +68,6 @@ namespace GCode {
 
     void comment(const std::string &s) const override;
     void message(const std::string &s) override;
+    void gprint(const std::string &s) const override;
   };
 }

@@ -368,3 +368,10 @@ void GCodeMachine::message(const string &s) {
 
   *stream << "(MSG," << String::escapeC(s) << ")\n";
 }
+
+
+void GCodeMachine::gprint(const string &s) const {
+  MachineAdapter::gprint(s);
+
+  *stream << s;
+}

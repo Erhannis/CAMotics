@@ -270,3 +270,13 @@ void JSONMachine::message(const string &s) {
   sink.insert("value", s);
   sink.endDict();
 }
+
+
+void JSONMachine::gprint(const string &s) const {
+  MachineAdapter::gprint(s);
+
+  sink.appendDict(true);
+  sink.insert("type", "gprint");
+  sink.insert("value", s);
+  sink.endDict();
+}

@@ -99,6 +99,7 @@ namespace GCode {
     void setLocation(const cb::LocationRange &location) override;
     void comment(const std::string &s) const override {} // TODO
     void message(const std::string &s) override;
+    void gprint(const std::string &s) const override {}
 
   protected:
     uint64_t getNextID();

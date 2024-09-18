@@ -219,5 +219,8 @@ namespace GCode {
 
     /// Output message
     virtual void message(const std::string &s) = 0;
+
+    /// Output raw gcode
+    virtual void gprint(const std::string &s) const = 0;
   };
 }

@@ -117,5 +117,7 @@ namespace GCode {
     void comment(const std::string &s) const override
       {_ _(this); next->comment(s);}
     void message(const std::string &s) override {_ _(this); next->message(s);}
+    void gprint(const std::string &s) const override
+      {_ _(this); next->gprint(s);}
   };
 }
